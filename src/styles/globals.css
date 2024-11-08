@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* //? common styling */
+@layer components {
+  .main-container {
+    @apply container mx-auto px-4 md:px-5 lg:px-7 2xl:px-9;
+  }
+  .main-spacing {
+    @apply pt-12 md:pt-16 lg:pt-20 2xl:pt-24;
+  }
+  .common-transition {
+    @apply transition-all ease-in-out duration-300 !important;
+  }
+  .title {
+    @apply text-2xl lg:text-4xl 2xl:text-5xl lg:leading-[3.15rem] 2xl:leading-[3.75rem] capitalize tracking-wide font-bold text-gray-800;
+  }
+  .description {
+    @apply tracking-wide capitalize text-gray-800;
+  }
+  .toggle {
+    accent-color: #3b82f6;
+  }
+  .primary-button {
+    @apply  bg-blue-500 text-white text-sm px-4 py-[5px] rounded-lg shadow hover:bg-blue-600 cursor-pointer transition;
+  }
+  .secondary-button {
+    @apply bg-black text-white text-sm px-4 py-[5px] rounded-lg shadow hover:bg-gray-800 cursor-pointer transition flex items-center gap-1;
+  }
+  .tertiary-button {
+    @apply bg-red-700 text-white text-sm px-4 py-[5px] rounded-lg shadow hover:bg-red-800 cursor-pointer transition flex items-center gap-1;
+  }
+  .upload-area {
+    @apply border-dashed border-2 border-gray-300 flex flex-col items-center p-8 rounded-lg text-gray-500;
+  }
+  .upload-area-small {
+    @apply border-dashed border-2 border-gray-300 flex flex-col items-center p-4 rounded-lg text-gray-500;
+  }
+  .upload-placeholder {
+    @apply border-dashed border-2 border-gray-300 rounded-lg p-4;
+  }
+}
+
+.input-field {
+  padding: 0.5rem;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+@layer utilities { 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+}
